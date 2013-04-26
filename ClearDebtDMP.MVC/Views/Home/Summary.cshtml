@@ -6,119 +6,123 @@
     ViewBag.Title = "Summary";
 }
 
-<h2>Summary </h2>
+<div class="span11 offset1">
 
-<table>
+    <h2>Summary</h2>
 
-    @if (Model.TotalDebt > 0)
-    {
+    <table>
 
-        if (Model.DisposableIncome > 0)
+        @if (Model.TotalDebt > 0)
         {
-            
-            <tr>
 
-                <td>
-
-                    Total Debt : £ @Model.TotalDebt.ToString("#.##")
-
-                </td>
-
-                <td>&nbsp;</td>
-
-                <td>
-
-                    Disposable Income : £ @Model.DisposableIncome.ToString("#.##")
-
-                </td>
-
-                <td>&nbsp;</td>
-
-                <td>
-
-                    Distributable Income : £ @Model.DistributableIncome.ToString("#.##")
-
-                </td>
-
-                <td>&nbsp;</td>
-
-                <td>
-
-                    Fee : £ @Model.Fee.ToString("#.##")
-
-                </td>
-
-            </tr>
-
-            if (Model.DebtRepaymentList != null)
+            if (Model.DisposableIncome > 0)
             {
-
+            
                 <tr>
 
-                    <td colspan="7">&nbsp;</td>
+                    <td>
+
+                        Total Debt : £ @Model.TotalDebt.ToString("#.##")
+
+                    </td>
+
+                    <td>&nbsp;</td>
+
+                    <td>
+
+                        Disposable Income : £ @Model.DisposableIncome.ToString("#.##")
+
+                    </td>
+
+                    <td>&nbsp;</td>
+
+                    <td>
+
+                        Distributable Income : £ @Model.DistributableIncome.ToString("#.##")
+
+                    </td>
+
+                    <td>&nbsp;</td>
+
+                    <td>
+
+                        Fee : £ @Model.Fee.ToString("#.##")
+
+                    </td>
 
                 </tr>
-        
-                foreach (DebtModel d in Model.DebtRepaymentList)
+
+                if (Model.DebtRepaymentList != null)
                 {
-            
+
                     <tr>
 
-
-                        <td colspan="3">
-
-                            @d.DebtDescription
-
-                        </td>
-
-                        <td>
-
-                            &nbsp;
-
-                        </td>
-
-                        <td>
-
-                            Total Debt : £ @d.DebtAmount.ToString("#.##")
-
-                        </td>
-
-                        <td>
-
-                            &nbsp;
-
-                        </td>
-
-                        <td>
-
-                            Repayment : £ @d.DebtMonthlyRepayment.ToString("#.##")
-
-                        </td>
-
+                        <td colspan="7">&nbsp;</td>
 
                     </tr>
+        
+                    foreach (DebtModel d in Model.DebtRepaymentList)
+                    {
             
+                        <tr>
+
+
+                            <td colspan="3">
+
+                                @d.DebtDescription
+
+                            </td>
+
+                            <td>
+
+                                &nbsp;
+
+                            </td>
+
+                            <td>
+
+                                Total Debt : £ @d.DebtAmount.ToString("#.##")
+
+                            </td>
+
+                            <td>
+
+                                &nbsp;
+
+                            </td>
+
+                            <td>
+
+                                Repayment : £ @d.DebtMonthlyRepayment.ToString("#.##")
+
+                            </td>
+
+
+                        </tr>
+            
+                    }
+        
                 }
         
             }
-        
+            else
+            {
+                <tr>
+
+                    <td>No Disposable Income</td>
+
+                </tr>
+            }
         }
         else
         {
             <tr>
 
-                <td>No Disposable Income</td>
+                <td>No Debt</td>
 
             </tr>
         }
-    }
-    else
-    {
-        <tr>
-
-            <td>No Debt</td>
-
-        </tr>
-    }
         
-</table>
+    </table>
+
+</div>
