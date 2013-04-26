@@ -1,0 +1,258 @@
+﻿@model ClearDebtDMP.Core.Models.DMPFeeRequestViewModel
+
+@{
+    ViewBag.Title = "Debt Management Plan";
+}
+
+<h2>Debt Management Plan</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+
+        <legend>Customer information</legend>
+
+        <table>
+
+            <tr>
+
+                <td>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CustomerSurname)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.CustomerSurname)
+                        @Html.ValidationMessageFor(model => model.CustomerSurname)
+                    </div>
+
+                </td>
+
+                <td>&nbsp;</td>
+
+                <td>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CustomerFirstname)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.CustomerFirstname)
+                        @Html.ValidationMessageFor(model => model.CustomerFirstname)
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Income)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Income)
+                        @Html.ValidationMessageFor(model => model.Income)
+                    </div>
+
+                </td>
+
+                <td>&nbsp;</td>
+
+                <td>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Expenses)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Expenses)
+                        @Html.ValidationMessageFor(model => model.Expenses)
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="3">
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CustomerDebtManagementCompanyId)
+                    </div>
+                    <div class="editor-field">
+                        @Html.DropDownListFor(model => model.CustomerDebtManagementCompanyId, Model.CustomerDebtManagementCompanyIdSelectList)
+
+                        @Html.ValidationMessageFor(model => model.CustomerDebtManagementCompanyId)
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Debt1Desctiption)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Debt1Desctiption)
+                        @Html.ValidationMessageFor(model => model.Debt1Desctiption)
+                    </div>
+
+                </td>
+
+                <td>&nbsp;</td>
+
+                <td>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Debt1Value)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Debt1Value)
+                        @Html.ValidationMessageFor(model => model.Debt1Value)
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Debt2Desctiption)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Debt2Desctiption)
+                        @Html.ValidationMessageFor(model => model.Debt2Desctiption)
+                    </div>
+
+                </td>
+
+                <td>&nbsp;</td>
+
+                <td>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Debt2Value)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Debt2Value)
+                        @Html.ValidationMessageFor(model => model.Debt2Value)
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Debt3Desctiption)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Debt3Desctiption)
+                        @Html.ValidationMessageFor(model => model.Debt3Desctiption)
+                    </div>
+
+                </td>
+
+                <td>&nbsp;</td>
+
+                <td>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Debt3Value)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Debt3Value)
+                        @Html.ValidationMessageFor(model => model.Debt3Value)
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Debt4Desctiption)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Debt4Desctiption)
+                        @Html.ValidationMessageFor(model => model.Debt4Desctiption)
+                    </div>
+
+                </td>
+
+                <td>&nbsp;</td>
+
+                <td>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Debt4Value)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Debt4Value)
+                        @Html.ValidationMessageFor(model => model.Debt4Value)
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Debt5Desctiption)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Debt5Desctiption)
+                        @Html.ValidationMessageFor(model => model.Debt5Desctiption)
+                    </div>
+
+                </td>
+
+                <td>&nbsp;</td>
+
+                <td>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Debt5Value)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Debt5Value)
+                        @Html.ValidationMessageFor(model => model.Debt5Value)
+                    </div>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+        <p>
+            <input type="submit" value="Calculate Debt Management Plan" />
+        </p>
+
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
