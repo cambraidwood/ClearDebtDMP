@@ -2,4 +2,3 @@ D:\Cam\development\VS2012\www\ClearDebtDMP\ClearDebtDMP.Core\bin\Debug\ClearDebt
 D:\Cam\development\VS2012\www\ClearDebtDMP\ClearDebtDMP.Core\bin\Debug\ClearDebtDMP.Core.pdb
 D:\Cam\development\VS2012\www\ClearDebtDMP\ClearDebtDMP.Core\obj\Debug\ClearDebtDMP.Core.dll
 D:\Cam\development\VS2012\www\ClearDebtDMP\ClearDebtDMP.Core\obj\Debug\ClearDebtDMP.Core.pdb
-D:\Cam\development\VS2012\www\ClearDebtDMP\ClearDebtDMP.Core\obj\Debug\ClearDebtDMP.Core.csprojResolveAssemblyReference.cache
